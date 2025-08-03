@@ -1,10 +1,15 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { ConfigModule } from '@nestjs/config';
+import { TgModule } from './telegram/tg.module';
+import { OllamaModule } from './oolama/ollama.module';
 
 @Module({
-  imports: [],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [
+    OllamaModule,
+    TgModule,
+    ConfigModule.forRoot({
+      isGlobal: true,
+    }),
+  ],
 })
 export class AppModule {}
