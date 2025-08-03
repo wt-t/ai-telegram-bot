@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TgService } from './tg.service';
-import { OllamaModule } from 'src/oolama/ollama.module';
+import { OllamaModule } from 'src/ollama/ollama.module';
 
 @Module({
   imports: [OllamaModule],

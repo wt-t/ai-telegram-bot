@@ -1,6 +1,6 @@
 import { Injectable, Logger } from '@nestjs/common';
 import TelegramBot from 'node-telegram-bot-api';
-import { OllamaService } from 'src/oolama/ollama.service';
+import { OllamaService } from 'src/ollama/ollama.service';
 
 @Injectable()
 export class TgService {
